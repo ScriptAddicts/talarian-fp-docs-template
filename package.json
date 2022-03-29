@@ -1,0 +1,34 @@
+{
+  "name": "my-dino",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve"
+  },
+  "dependencies": {
+    "@docusaurus/core": "latest",
+    "@docusaurus/preset-classic": "latest",
+    "@mdx-js/react": "^1.6.21",
+    "clsx": "latest",
+    "docusaurus": "^1.14.7",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

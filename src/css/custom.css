@@ -1,0 +1,322 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@import "modules/notes.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+  --ifm-color-primary: rgb(98, 70, 228);
+  --ifm-color-primary-dark: rgb(76, 44, 224);
+  --ifm-color-primary-darker: rgb(66, 32, 221);
+  --ifm-color-primary-darkest: rgb(54, 27, 182);
+  --ifm-color-primary-light: rgb(120, 96, 232);
+  --ifm-color-primary-lighter: rgb(131, 109, 234);
+  --ifm-color-primary-lightest: rgb(164, 148, 239);
+  --ifm-code-font-size: 95%;
+  --ifm-font-size-base: 100%;
+  --ifm-font-family-base: Inter;
+  --ifm-font-family-monospace: 'Roboto Mono';
+  --ifm-font-family-concept-headings: 'Lexend Deca';
+  --ifm-font-family-task-headings: 'Lexend Deca';
+  --ifm-footer-background-color: rgb(98, 70, 228); 
+  --doc-sidebar-width: 500px !important;
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary:rgb(252, 188, 20);
+  --ifm-color-primary-dark: rgb(242, 176, 3);
+  --ifm-color-primary-darker: rgb(228, 166, 3);
+  --ifm-color-primary-darkest: rgb(188, 137, 2);
+  --ifm-color-primary-light: rgb(252, 196, 47);
+  --ifm-color-primary-lighter: rgb(253, 199, 60);
+  --ifm-color-primary-lightest: rgb(253, 211, 101);
+  --ifm-footer-background-color: rgb(28, 30, 33);
+  --ifm-navbar-background-color: rgb(28, 30, 33);
+}
+
+html[data-theme='dark'] ol ol li:before {
+  color: rgb(0, 0, 0);
+}
+
+html[data-theme='dark'] ol li:before {
+  color: rgb(0, 0, 0);
+}
+
+.footer {
+  --ifm-footer-color: var(--ifm-footer-link-color);
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+.footer-social-items {
+  list-style: none;
+  display:  flex;
+  flex-flow: row nowrap;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+}
+
+footer > img {
+  align-content: left;
+}
+
+.footer-social-items > li {
+
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+table {
+    width: 100%;
+}
+
+.markdown li > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.pre {
+  background-color: var(--ifm-pre-background);
+  border-radius: var(--ifm-pre-border-radius);
+  color: var(--ifm-pre-color);
+  font: var(--ifm-code-font-size)/var(--ifm-pre-line-height) var(--ifm-font-family-monospace);
+  margin: 0 0 var(--ifm-spacing-vertical);
+  overflow: auto;
+  padding: var(--ifm-pre-padding);
+  word-wrap: normal;
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.ph {
+    display: inline;
+    /* background-color: var(--ifm-pre-background); */
+    border-radius: var(--ifm-pre-border-radius);
+    color: var(--ifm-pre-color);
+    /* font: var(--ifm-code-font-size)/var(--ifm-pre-line-height) var(--ifm-font-family-monospace); */
+    word-wrap: normal;
+    /* font-family: monospace; */
+    white-space: pre-wrap;
+}
+
+.markdown {
+    --ifm-h1-vertical-rhythm-top: 0; 
+}
+
+.anchor_top_offset::before {
+    top: calc(var(--ifm-navbar-height) * -1);
+    content: '';
+    display: block;
+    height: calc(var(--ifm-navbar-height));
+    margin-top: calc(var(--ifm-navbar-height) * -1);
+    visibility: hidden;
+}
+
+/* Wrap long lines of text in codeblocks */
+code {
+  white-space: pre-wrap;
+}
+
+span .ph.cmd {
+  font-family: var(--ifm-font-family-base);
+}
+
+/* Bold <uicontrol> */
+.ph.uicontrol {
+  font-weight: 900;
+}
+
+/* Italics <wintitle> */
+.keyword.wintitle {
+  font-style: italic;
+}
+
+/* use a., b., c. for <substeps> */
+.li.substep.substepexpand {
+  list-style-type: lower-latin;
+}
+
+/* Remove underline from gt symbol between <uicontrol> in <menucascade> */
+abbr[title] {
+  text-decoration: none;
+}
+
+/* Apply Lexend Deca to topic title */
+
+header > h1 {
+  font-family: var(--ifm-font-family-concept-headings);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-font-family-concept-headings);
+}
+
+/* Task topic - Add section titles */
+
+.section.prereq + .ol.steps::before, .section.context + .ol.steps::before, .shortdesc + .ol.steps::before {
+  content: "Procedure";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  /* The margin for the Procedure heading differs from Prereqs, About.., and Result because the list squares increase the left-margin of steps  */
+  margin-left: -2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section.prereq::before {
+  content: "Prerequisites";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section.context::before {
+  content: "About this task";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section.result::before {
+  content: "Result";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section.postreq::before {
+  content: "What's next";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Troubleshooting topic - Add section titles */
+
+.section.condition::before {
+  content: "Issue";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section.cause::before {
+  content: "Cause";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section.remedy::before {
+  content: "Solution";
+  font-family: var(--ifm-font-family-task-headings);
+  font-weight: 500;
+  font-size: 150%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+ol.steps {
+    display: block;
+    padding: 0 0 0 30px;
+    list-style: none;
+    overflow: hidden;
+    counter-reset: numList;
+}
+ol.steps li {
+    position: relative;
+}
+ol.steps li:before {
+    counter-increment: numList;
+    content: counter(numList);
+    
+    float: left;
+    position: absolute;
+    left: -27px;
+    top: 1.5px;
+    
+    font: bold 16px sans-serif;
+    font-family: var(--ifm-font-family-base);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 23px;
+    
+    width: 23px; height: 23px;
+    background: var(--ifm-color-primary);;
+    
+    -moz-border-radius: 999px;
+    border-radius: 999px
+}
+
+ol ol.substeps {
+    display: block;
+    padding: 0 0 0 30px;
+    list-style: none;
+    overflow: hidden;
+    counter-reset: numList;
+}
+
+ol ol.substeps li {
+    position: relative;
+}
+ol ol.substeps li:before {
+    counter-increment: numList;
+    content: counter(numList, lower-alpha);
+    
+    float: left;
+    position: absolute;
+    left: -27px;
+    top: 1.5px;
+    
+    font: bold 16px sans-serif;
+    font-family: var(--ifm-font-family-base);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 23px;
+    
+    width: 23px; height: 23px;
+    background: var(--ifm-color-primary);
+    
+    -moz-border-radius: 999px;
+    border-radius: 999px
+}
+
+ol.steps ul li:before {
+  content: none;
+}

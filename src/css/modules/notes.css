@@ -1,0 +1,126 @@
+/* Import icons/font. */
+@font-face {
+  font-family: icomoon;
+  src: url("https://jorsek.github.io/pdfgen.github.io/fonts/note_icons/fonts/icomoon.ttf") format("truetype");
+}
+/* Style the font containing icons preceding note captions. */
+.note__title::before {
+  display: inline-block;
+  font-family: icomoon;
+  font-size: 13px;
+  padding-right: 3.5px;
+}
+.note_note > .note__title::before {
+  content: "\e906";
+}
+.note_trouble > .note__title::before {
+  content: "\e901";
+}
+.note_tip > .note__title::before {
+  content: "\e908";
+}
+.note_fastpath > .note__title::before {
+  content: "\e905";
+}
+.note_important > .note__title::before {
+  content: "\e90a";
+}
+.note_remember > .note__title::before {
+  content: "\e907";
+}
+.note_restriction > .note__title::before {
+  content: "\e900";
+}
+.note_attention > .note__title::before {
+  content: "\e902";
+}
+.note_caution > .note__title::before {
+  content: "\e904";
+}
+.note_warning > .note__title::before {
+  content: "\e909";
+}
+.note_danger > .note__title::before {
+  content: "\e903";
+}
+
+/* All notes */
+div.note {
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, Arial;
+  margin-bottom: 1em;
+  border-color: var(--ifm-alert-border-color);
+  border-width: var(--ifm-alert-border-width);
+  border-radius: var(--ifm-alert-border-radius);
+  padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+  background: #112e4f;
+  color: #f5f6f7;
+  border: none;
+  font-size: 1rem;
+}
+div.note > span.note__title {
+  display: inline-block;
+  color: #f5f6f7;
+  font-weight: bold;
+  /*font-size: 0.88rem;*/
+  /*margin-bottom: 0.50rem;*/
+  text-transform: uppercase;
+}
+
+/* Background colors */
+div.note.note_note,
+div.note.note_trouble {
+  background: #003749;
+}
+
+div.note.note_tip {
+  background: #3f6c51;
+}
+div.note.note_fastpath {
+  background: #3f6c51;
+}
+
+div.note.note_important {
+  background: #ffa600;
+}
+div.note.note_remember {
+  background: #ffa600;
+}
+div.note.note_restriction {
+  background: #ffa600;
+}
+
+div.note.note_attention {
+  background: #D95700;
+}
+div.note.note_caution {
+  background: #D95700;
+}
+div.note.note_warning {
+  background: #D95700;
+}
+div.note.note_danger {
+  background: #D95700;
+}
+div.note.note_restriction {
+  background: #D95700;
+}
+
+/* Fix issues with colors of note children */
+div.note,
+div.note * {
+  color: #f5f6f7;
+}
+
+/* Fix issues with background colors */
+div.note code.ph.codeph,
+div.note div.pre.codeblock {
+  color: #f5f6f7;
+  background-color: rgb(72, 77, 91);
+}
