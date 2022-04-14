@@ -27,7 +27,7 @@
   --ifm-font-family-concept-headings: 'Lexend Deca';
   --ifm-font-family-task-headings: 'Lexend Deca';
   --ifm-footer-background-color: rgb(98, 70, 228); 
-  --doc-sidebar-width: 500px !important;
+  --doc-sidebar-width: 375px !important;
 }
 
 html[data-theme='dark'] {
