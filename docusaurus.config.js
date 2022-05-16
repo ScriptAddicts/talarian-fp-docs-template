@@ -8,7 +8,11 @@ module.exports = {
   "organizationName": "your-org",
   "projectName": "docusaurus",
   "themeConfig": {
-    "hideableSidebar": true,
+    "docs": {
+      "sidebar": {
+        "hideable": true,
+      },
+    },
     "navbar": {
       "style": "primary",
       "logo": {
